@@ -8,11 +8,7 @@ spec:
         from:
           uri: kamelet:http-source
           steps:
-#             - to:
-#                 uri: file:/scripts/
-#                 parameters:
-#                   fileName: demoFile
             - log:
-                message: nirav
+                message: ${body}
           parameters:
             url: https://api.exchange.coinbase.com/products
