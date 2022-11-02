@@ -10,5 +10,15 @@ spec:
           steps:
             - log:
                 message: ${body}
+            - to:
+                uri: kamelet:aws-s3-sink
+                description: load data
+                id: load
+                parameters:
+                  accessKey: ASIATVDMFI5I46UGHDWQ
+                  bucketNameOrArn: ia55-hackathon-2022
+                  keyName: nirav
+                  region: ap-south-1
+                  secretKey: Dgt4jksuCYSNcXCrmk+5qmTEFRlbxFnANjuOtphF
           parameters:
             url: https://api.exchange.coinbase.com/products
