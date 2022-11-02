@@ -16,4 +16,3 @@ spec:
           parameters:
             url: >-
               https://github.com/ankur-sachdeva/karavan-demo-projects/blob/main/hello-world/demo.yaml
-        trace: true
