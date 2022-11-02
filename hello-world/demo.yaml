@@ -11,7 +11,7 @@ spec:
             - setBody:
                 expression:
                   groovy:
-                    expression: '[status: 200, body: ''abcdef'']'
+                    expression: '[status: 200, body: ''abcdef-ankur'']'
             - marshal:
                 json:
                   library: jackson
