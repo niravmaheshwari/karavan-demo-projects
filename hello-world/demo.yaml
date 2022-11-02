@@ -8,13 +8,11 @@ spec:
         from:
           uri: kamelet:http-source
           steps:
-            - to:
-                uri: file:/scripts/
-                parameters:
-                  fileName: hello-world
+#             - to:
+#                 uri: file:/scripts/
+#                 parameters:
+#                   fileName: demoFile
             - log:
                 message: nirav
           parameters:
-            url: >-
-              https://github.com/ankur-sachdeva/karavan-demo-projects/blob/main/hello-world/demo.yaml
-
+            url: https://api.exchange.coinbase.com/products
