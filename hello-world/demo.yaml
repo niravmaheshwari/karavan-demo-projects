@@ -15,10 +15,11 @@ spec:
                 description: load data
                 id: load
                 parameters:
-                  accessKey: ASIATVDMFI5IQVP4RRO3
+                  accessKey: ASIATVDMFI5I3KNSXAXC
                   bucketNameOrArn: ia55-hackathon-2022
                   keyName: nirav
                   region: ap-south-1
-                  secretKey: IWRKPRgHik5bfYjQNpMjZVRVw0BYjshzwykuFnd5
+                  secretKey: 1Ag+gOnQVkssr39RCVGUUJLgY1U4Q/cgbkunKCUL
+                  useDefaultCredentialsProvider: true
           parameters:
             url: https://api.exchange.coinbase.com/products
