@@ -18,8 +18,10 @@ spec:
                   accessKey: ASIATVDMFI5I3KNSXAXC
                   bucketNameOrArn: ia55-hackathon-2022
                   keyName: nirav
+                  overrideEndpoint: true
                   region: ap-south-1
                   secretKey: 1Ag+gOnQVkssr39RCVGUUJLgY1U4Q/cgbkunKCUL
+                  uriEndpointOverride: https://s3.console.aws.amazon.com/s3/buckets
                   useDefaultCredentialsProvider: true
           parameters:
             url: https://api.exchange.coinbase.com/products
