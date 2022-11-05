@@ -10,13 +10,15 @@ spec:
           steps:
             - log:
                 message: ${body}
+            - marshal:
+                json: {}
             - to:
                 uri: kamelet:aws-s3-sink
                 description: load data
                 id: load
                 parameters:
                   accessKey: ASIATVDMFI5IUHC7SF2Z
-                  bucketNameOrArn: arn:aws:s3:::ia55-hackathon-2022
+                  bucketNameOrArn: ia55-hackathon-2022
                   keyName: superstars
                   region: ap-south-1
                   secretKey: JgEywuX5fnETLGp44L43OlLJQn6C5+HX3yos5kUF
