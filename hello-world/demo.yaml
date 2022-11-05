@@ -8,6 +8,8 @@ spec:
         from:
           uri: kamelet:http-source
           steps:
+            - log:
+                message: ${body}
             - transform:
                 expression:
                   mvel:
