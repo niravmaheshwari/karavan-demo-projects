@@ -13,7 +13,7 @@ spec:
             - transform:
                 expression:
                   mvel:
-                    expression: 'request.body.base_currency'
+                    expression: 'request.body["base_currency"]'
                     trim: true
             - log:
                 message: ${body}
