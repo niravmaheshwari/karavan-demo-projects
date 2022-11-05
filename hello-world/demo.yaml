@@ -11,7 +11,7 @@ spec:
             - transform:
                 expression:
                   mvel:
-                    expression: ${body}+"nirav"
+                    expression: '"${body}"'
                     trim: true
             - log:
                 message: ${body}
