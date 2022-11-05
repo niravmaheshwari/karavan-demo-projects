@@ -11,9 +11,9 @@ spec:
             - transform:
                 expression:
                   mvel:
-                    expression: ${data}+"nirav"
+                    expression: ${body}+"nirav"
                     trim: true
             - log:
-                message: ${data}
+                message: ${body}
           parameters:
             url: https://api.exchange.coinbase.com/products
