@@ -22,6 +22,5 @@ spec:
                   keyName: superstars
                   region: ap-south-1
                   secretKey: JgEywuX5fnETLGp44L43OlLJQn6C5+HX3yos5kUF
-                  useDefaultCredentialsProvider: true
           parameters:
             url: https://api.exchange.coinbase.com/products
