@@ -8,26 +8,12 @@ spec:
         from:
           uri: kamelet:http-source
           steps:
+            - transform:
+                expression:
+                  mvel:
+                    expression: ${data}+"nirav"
+                    trim: true
             - log:
-                message: ${body}
-            - marshal:
-                json: {}
-#             - to:
-#                 uri: kamelet:aws-s3-sink
-#                 description: load data
-#                 id: load
-#                 parameters:
-#                   accessKey: ASIATVDMFI5IUHC7SF2Z
-#                   bucketNameOrArn: ia55-hackathon-2022
-#                   keyName: superstars
-#                   region: ap-south-1
-#                   secretKey: JgEywuX5fnETLGp44L43OlLJQn6C5+HX3yos5kUF
-#                   useDefaultCredentialsProvider: true
-            - to:
-                uri: kamelet:http-sink
-                parameters:
-                  method: GET
-                  url: https://api.exchange.coinbase.com/products  
-                  
+                message: ${data}
           parameters:
             url: https://api.exchange.coinbase.com/products
