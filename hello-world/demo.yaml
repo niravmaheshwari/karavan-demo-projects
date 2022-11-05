@@ -13,7 +13,7 @@ spec:
             - transform:
                 expression:
                   mvel:
-                    expression: '"${body}"'
+                    expression: 'request.body'
                     trim: true
             - log:
                 message: ${body}
