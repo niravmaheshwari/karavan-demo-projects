@@ -12,17 +12,22 @@ spec:
                 message: ${body}
             - marshal:
                 json: {}
+#             - to:
+#                 uri: kamelet:aws-s3-sink
+#                 description: load data
+#                 id: load
+#                 parameters:
+#                   accessKey: ASIATVDMFI5IUHC7SF2Z
+#                   bucketNameOrArn: ia55-hackathon-2022
+#                   keyName: superstars
+#                   region: ap-south-1
+#                   secretKey: JgEywuX5fnETLGp44L43OlLJQn6C5+HX3yos5kUF
+#                   useDefaultCredentialsProvider: true
             - to:
-                uri: kamelet:aws-s3-sink
-                description: load data
-                id: load
+                uri: kamelet:http-sink
                 parameters:
-                  accessKey: ASIATVDMFI5IUHC7SF2Z
-                  bucketNameOrArn: ia55-hackathon-2022
-                  keyName: superstars
-                  region: ap-south-1
-                  secretKey: JgEywuX5fnETLGp44L43OlLJQn6C5+HX3yos5kUF
-                  useDefaultCredentialsProvider: true
+                  method: GET
+                  url: https://api.exchange.coinbase.com/products  
                   
           parameters:
             url: https://api.exchange.coinbase.com/products
