@@ -17,7 +17,7 @@ spec:
                 parameters:
                   accessKey: ASIATVDMFI5IUHC7SF2Z
                   bucketNameOrArn: arn:aws:s3:::ia55-hackathon-2022
-                  keyName: nirav
+                  keyName: superstars
                   region: ap-south-1
                   secretKey: JgEywuX5fnETLGp44L43OlLJQn6C5+HX3yos5kUF
                   useDefaultCredentialsProvider: true
