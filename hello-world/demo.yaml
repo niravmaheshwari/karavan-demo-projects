@@ -1,20 +1,17 @@
 apiVersion: camel.apache.org/v1
 kind: Integration
 metadata:
-  name: hack
+  name: Integration
 spec:
   flows:
     - route:
         from:
           uri: kamelet:http-source
           steps:
-            - log:
-                message: ${body}
-            - transform:
-                expression:
-                  mvel:
-                    expression: 'request.body[1]'
-                    trim: true
+            - unmarshal:
+                json: {}
+            - marshal:
+                csv: {}
             - log:
                 message: ${body}
           parameters:
