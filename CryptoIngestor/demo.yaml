@@ -1,0 +1,18 @@
+apiVersion: camel.apache.org/v1
+kind: Integration
+metadata:
+  name: Integration
+spec:
+  flows:
+    - route:
+        from:
+          uri: kamelet:http-source
+          steps:
+            - unmarshal:
+                json: {}
+            - marshal:
+                csv: {}
+            - log:
+                message: ${body}
+          parameters:
+            url: https://api.exchange.coinbase.com/products
