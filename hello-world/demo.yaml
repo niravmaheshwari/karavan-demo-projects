@@ -1,18 +1,16 @@
 apiVersion: camel.apache.org/v1
 kind: Integration
 metadata:
-  name: Integration
+  name: CryptoIngestor
 spec:
   flows:
     - route:
         from:
-          uri: kamelet:http-source
+          uri: kamelet:http-secured-source
           steps:
             - unmarshal:
                 json: {}
             - marshal:
                 csv: {}
-            - log:
-                message: ${body}
           parameters:
             url: https://api.exchange.coinbase.com/products
