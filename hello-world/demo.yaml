@@ -6,7 +6,7 @@ spec:
   flows:
     - route:
         from:
-          uri: kamelet:http-secured-source
+          uri: kamelet:http-source
           steps:
             - unmarshal:
                 json: {}
