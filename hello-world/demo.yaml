@@ -12,5 +12,7 @@ spec:
                 json: {}
             - marshal:
                 csv: {}
+            - log:
+                message: ${body}
           parameters:
             url: https://api.exchange.coinbase.com/products
